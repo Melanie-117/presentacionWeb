@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi portafolio digital</title>
+
+    <!-- Iconos -->
+    <link rel="stylesheet" type="text/css" href="./librerias/fontawesome-free-7.0.0-web/css/all.min.css"/>
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" type="text/css" href="./librerias/bootstrap-5.3.8-dist/css/bootstrap.min.css"/>
+  
+    <!-- menu CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+</head>
+<body>
+    <div id="menu-container"></div>
+
+    <main>
+        <div id="titulo" class="d-flex justify-content-start mt-3 mb-3 w-100">
+            <h5>Mis certificaciones</h5>
+        </div>
+
+        <!-- Mostrar PDF -->
+        <!-- <iframe src="pdf/13018 C.pdf"  style="border:none;"></iframe> -->
+        <!-- <embed src="pdf/13018 C.pdf" type="application/pdf" width="360px" height="290px"> -->
+        <div class="contenedor_pdf d-flex gap-2">
+            <div class="card">
+                <a href="pdf/13018 C.pdf" target="_blank" class="mb-2">
+                    <div class="d-flex justify-content-center">
+                        <img src="pdf/previo-13018 C.png">
+                    </div>
+                </a>
+                <div class="mt-auto">
+                    <p class="text-center">
+                        <i class="fa-solid fa-file-pdf"></i> Certificado en Diseño Grafico
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <a href="pdf/13018 D.pdf" target="_blank" class="mb-2">
+                    <div class="d-flex justify-content-center">
+                        <img src="pdf/previo-13018 D.png">
+                    </div>
+                </a>
+                <div class="mt-auto">
+                    <p class="text-center">
+                        <i class="fa-solid fa-file-pdf"></i> Diplomado en Diseño Grafico
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- BOOTSTRAP JS (bundle con Popper incluido) -->
+    <script src="./librerias/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Menu Colapsado JS-->
+    <script src="/script/menu_colapsado.js"></script>
+    <!-- JQuery -->
+    <script src="./librerias/jquery-3.7.1.min.js"></script>
+    <!-- js menu lateral -->
+    <script type="text/javascript" src="/script/script.js"></script>
+</html>

@@ -1,0 +1,149 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: linear-gradient(to bottom, rgb(31,59,70), rgb(0,0,0));
+  background-attachment: fixed;   /* ❗ Evita que se repita */
+  background-repeat: no-repeat;   /* ❗ No repite el fondo */
+  background-size: cover;         /* ❗ Cubre toda la pantalla */
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+main {
+    margin: 1rem;
+    margin-top: 70px;
+    padding: 2rem;
+    border: 1px solid rgb(236, 236, 236);
+    border-radius: .4rem;
+    /* Hace que el main use todo el espacio vertical restante */
+    flex-grow: 1; 
+}
+
+/* ANIMACION DE LOS TITULOS */
+#titulo{
+    color: white;
+    animation: aparecer 2s ease-out forwards;
+}
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(50px); /*empieza abajo*/
+    }to{
+        opacity: 1;
+        transform: translateY(0); /*sube a su posición */
+    }
+}
+
+/* AJUSTE DE LAS IMAGENES */
+.contenedor_card {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+
+    /* hace que TODAS las filas tengan la misma altura */
+    align-items: stretch;
+}
+
+.contenedor_card .card {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(32, 32, 32);
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border-radius: 12px;
+    height: 110%;
+}
+
+.contenedor_card .card img {
+    width: 100%;
+    height: 250px;         
+    object-fit: cover;/* recorta sin deformar */
+    border-radius: 10px;
+}
+
+/* Texto ocupa espacio restante de manera uniforme */
+.contenedor_card .card .mt-auto {
+    margin-top: auto;
+}
+
+.contenedor_card .card:hover{
+    transform: translateY(-9px) !important;
+    background-color: rgb(97, 97, 97);
+    box-shadow: 0 15px 25px #0008;
+}
+
+@media (max-width: 1200px) {
+    .contenedor_card {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .contenedor_card {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .contenedor_card {
+        grid-template-columns: 1fr;
+    }
+}
+
+#modalImage {
+  max-height: 70vh; /* No más del 80% del alto de la ventana */
+  object-fit: contain; /* Que no se distorsione */
+}
+
+/* AJUSTE Y ANIMACION DEL CARD PDF */
+.contenedor_pdf .card img {
+    width: 100%;
+    height: auto;
+}
+.contenedor_pdf .card {
+    width: 300px;
+    background-color: rgb(32, 32, 32);
+    color: white;
+    overflow: hidden;
+    text-align: center;
+    opacity: 0; /* empieza invisible */
+    transform: translateY(50px); /* empieza abajo */
+    animation: aparecer 0.6s ease-out forwards;
+}
+
+/* Retrasos individuales para que aparezcan uno por uno */
+.contenedor_pdf .card:nth-child(1) {
+    animation-delay: 0s; /* primero */
+}
+.contenedor_pdf .card:nth-child(2) {
+    animation-delay: 0.2s; /* segundo, después de 0.3s */
+}
+.contenedor_pdf .card:nth-child(3) {
+    animation-delay: 0.4s; /* tercero, si existiera */
+}
+
+@keyframes aparecer {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ANIMACION CUANDO SE CARGA LA PAGINA, APARECEN LAS IMAGENES */
+.animar {
+    animation: aparecer 0.5s ease-out forwards;
+}
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(50px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

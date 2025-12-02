@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi portafolio digital</title>
+
+    <!-- Iconos -->
+    <link rel="stylesheet" type="text/css" href="./librerias/fontawesome-free-7.0.0-web/css/all.min.css"/>
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" type="text/css" href="./librerias/bootstrap-5.3.8-dist/css/bootstrap.min.css"/>
+  
+    <!-- menu CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+</head>
+<body>
+    <div id="menu-container"></div>
+
+    <main>
+        <div class="">
+            <div id="titulo" class="d-flex justify-content-start mt-3 mb-3 w-100">
+                <h5>Mis trabajas Illustraitor y Photoshop</h5>
+            </div>
+            <!-- GALERIA DE IMAGENES -->
+            <div class="contenedor_card mb-3">
+                <div class="card d-none">
+                    <img class="card-img-top mt-1 mb-1" src="img/img_illustraitor/ejercicio1.png">
+                    <div class="mt-auto">
+                        <p class="text-center">Trazado</p>
+                    </div>
+                    <div class="contenedor_descripcion" hidden>
+                        <p>Trazado de una imagen utilizando la herramineta pluma, ancho, relleno y trazado</p>
+                    </div>
+                </div>
+
+                <div class="card d-none">
+                    <img class="card-img-top mt-1 mb-1" src="img/img_illustraitor/ejercicio2.png">
+                    <div class="mt-auto">
+                        <p class="text-center">Proporción áurea</p>
+                    </div>
+                     <div class="contenedor_descripcion" hidden>
+                        <p>Trazado de una imagen utilizando proporcion aurea junto con la herramienta degradado</p>
+                    </div>
+                </div>
+
+                <div class="card d-none">
+                    <img class="card-img-top mt-1 mb-1" src="img/img_illustraitor/ejercicio3.png">
+                    <div class="mt-auto">
+                        <p class="text-center">Inflado 3D</p>
+                    </div>
+                    <div class="contenedor_descripcion" hidden>
+                        <p>Texto 3D utilizando la herramienta texto, inflado y degradado</p>
+                    </div>
+                </div>
+
+                <div class="card d-none">
+                    <img class="card-img-top mt-1 mb-1" src="img/img_illustraitor/ilustracion1.png">
+                    <div class="mt-auto">
+                        <p class="text-center">Ilustraci&oacute;n autobus</p>
+                    </div>
+                    <div class="contenedor_descripcion" hidden>
+                        <p>Ilustración de autobus utilizando la herramienta pluma, relleno y trazado. Representando el registro de parque vehicular</p>
+                    </div>
+                </div>
+
+                <div class="card d-none">
+                    <img class="card-img-top mt-1 mb-1" src="img/img_illustraitor/ilustracion2.png">
+                    <div class="mt-auto">
+                        <p class="text-center">Ilustraci&oacute;n autobus</p>
+                    </div>
+                    <div class="contenedor_descripcion" hidden>
+                        <p>Ilustración de autobus utilizando la herramienta pluma, relleno y trazado. Representando el contrato de un servicio especial para un evento</p>
+                    </div>
+                </div>
+
+                <div class="card d-none">
+                    <img class="card-img-top mt-1 mb-1" src="img/img_photoshop/ejercicio1.png">
+                    <div class="mt-auto">
+                        <p class="text-center">Corrector puntual</p>
+                    </div>
+                    <div class="contenedor_descripcion" hidden>
+                        <p>Correcci&oacute;n de textura de piel utilizando la herramienta corrector puntual</p>
+                    </div>
+                </div>
+
+                <div class="card d-none">
+                    <img class="card-img-top mt-1 mb-1" src="img/img_photoshop/ejercicio2.png">
+                    <div class="mt-auto">
+                        <p class="text-center">Tipografia</p>
+                    </div>
+                    <div class="contenedor_descripcion" hidden>
+                        <p>Tipografia con mi nombre y mi fotografia utilizando las herramientas texto, seleccion directa, opacidad, convirtiendo en forma el texto y aplicando una mascara de recorte sobre la imagen</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- MODAL PARA MOSTRAR IMAGEN -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-transparent border-0">
+                <div class="modal-body text-center">
+                    <img id="modalImage" class="img-fluid rounded">
+                    <div id="modalDescripcion" class="mt-3">
+                        <h4 id="descripcion_texto" class="text-light"></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- BOOTSTRAP JS (bundle con Popper incluido) -->
+    <script src="./librerias/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JQuery -->
+    <script src="./librerias/jquery-3.7.1.min.js"></script>
+    <!--  -->
+    <script type="text/javascript" src="/script/script.js"></script>   
+</body>
+</html>
